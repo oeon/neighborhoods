@@ -74,7 +74,7 @@ function go(){
   overlg.addTo(map);
   toner.addTo(map);
   map.fitBounds(selectedCity.bnds);
-  map.setView([42.360418, -71.070722],13)
+  map.setView([35.2709, -120.6650],13)
 
   //draw controls
   drawnItems = new L.FeatureGroup();
