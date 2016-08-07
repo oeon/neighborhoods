@@ -4,7 +4,7 @@
 var myCities = [  //NAME AND BOUNDS OF CITIES 
   {name:"SLO",bnds:[[35.230468,-120.709052],[35.311318,-120.620895]]}
 ]
-,tblName = "slo_neighborhoods" // cartoDB table name
+,tblName = "hoods" // cartoDB table name
 ,usrName = "geoslo" // your cartoDB username
 ,brandText = "Mapping SLO's neighborhoods" // top left text and link on site
 ,brandLink = "" //top left link on site
