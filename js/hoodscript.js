@@ -2,15 +2,15 @@
 ----- Config Vars: Change these to configure for your city or cities-------------
 ---------------------------*/
 var myCities = [  //NAME AND BOUNDS OF CITIES 
-  {name:"Boston",bnds:[[42.195649,-71.285258],[42.550992,-70.836535]]}
+  {name:"SLO",bnds:[[35.230468,-120.709052],[35.311318,-120.620895]]}
 ]
-,tblName = "hoods" // cartoDB table name
-,usrName = "bostonography" // your cartoDB username
-,brandText = "Mapping Greater Boston's neighborhoods" // top left text and link on site
-,brandLink = "http://bostonography.com" //top left link on site
+,tblName = "slo_neighborhoods" // cartoDB table name
+,usrName = "geoslo" // your cartoDB username
+,brandText = "Mapping SLO's neighborhoods" // top left text and link on site
+,brandLink = "" //top left link on site
 ,giturl = "https://github.com/enam/neighborhoods" //Only change this if you want to link to a fork you made, otherwise you can leave the link to the original repo
-,twiturl = "https://twitter.com/bostonography" //Links to my twit acct, change it if you want or remove twitter link altogether
-,myPath = "http://bostonography.cartodb.com/api/v2"; //this is the root path to your cartoDB instance with the v2 api param
+,twiturl = "https://twitter.com/oeon" //Links to my twit acct, change it if you want or remove twitter link altogether
+,myPath = "http://geoslo.cartodb.com/api/v2"; //this is the root path to your cartoDB instance with the v2 api param
 
 /*---------------------------
 ----- Application Vars -------------
@@ -47,13 +47,8 @@ var selectedCity = myCities[0]//selected city defaults to first myCities city.
 //,fillArr = ['#8DD3C7','#FFED6F','#BEBADA','#FB8072','#80B1D3','#FDB462','#B3DE69','#FCCDE5','#D9D9D9','#BC80BD','#CCEBC5','#FFFFB3']
 //fill array from tools.medialab.sciences-po.fr/iwanthue/index.php
 ,fillArr = ["#E7C265","#8AD4E2","#ECACC1","#95D18F","#E9D5B3","#E1EF7E","#F69D92","#9CD7BF","#B2BD75","#D1D3CF","#DAC1E1","#B3C69F","#D1AB6D","#E9D898","#B0CBE6","#D9B5AB","#86E9E1","#DBEA97","#D1F1E4","#DDEBBB","#DFB991","#F3AD8E","#8CDEB5","#EDAF69","#B9F2A6","#8DC8C4","#C2E887","#E5D670","#EAD483","#C4BF6A"]
-,toner = L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-    attribution: '<a href="http://stamen.com/" target="_blank" >Stamen</a> | &copy; <a href="http://openstreetmap.org/" target="_blank" >OpenStreetMap</a> contributors'
-})
-,sat = L.tileLayer("http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg", {
-  attribution: 'Search<a href="http://www.mapquest.com/" target="_blank"><img src="http://developer.mapquest.com/content/osm/mq_logo.png"></a>, NASA/JPL, Caltech, USDA',
-  subdomains: '1234'
-})
+,toner = L.tileLayer('https://api.mapbox.com/styles/v1/geoslo/cirkvv5e00019g4mb78ylivms/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2Vvc2xvIiwiYSI6IjJuWms2amcifQ.sr4_SHBt9FeFZY5iSaJcSA')
+,sat = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2Vvc2xvIiwiYSI6IjJuWms2amcifQ.sr4_SHBt9FeFZY5iSaJcSA")
 ,instructed={};
 /*---------------------------
 ----- $(window).load -------
