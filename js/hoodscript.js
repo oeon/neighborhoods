@@ -546,7 +546,7 @@ var getExistingNeighborhoodNames = function(){
         console.log(text_status)
       }
     }).done(function(data) {
-      var newARR=[].concat(hoodNames);  // names.js
+      var newARR=[];""
       $.each(data.rows, function() {
         if ( newARR.indexOf( this.name ) == -1 )
       newARR.push(this.name);
